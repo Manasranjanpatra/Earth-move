@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+            overflow: hidden;
+        }
+        
+
+        .container {
+            animation: rotate 15s linear 0s infinite;
+            height: 70vh;
+            width: 70vh;
+            /* box-shadow: 2px 2px 40px black; */
+            border-radius: 50%;
+            border: 2px solid whitesmoke;
+            /* border-top: 2px solid blanchedalmond; */
+            /* position: relative; */
+             display: flex;
+                justify-content: center;
+                align-items: center;
+                  
+
+        }
+
+        .sun {
+            /* animation: rotate 1.9s ease 3s infinite; */
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+           /* position: relative; */
+            height: 15vh;
+            width: 15vh;
+            background-color:rgb(228, 217, 8);
+            box-shadow: 2px 2px 2px black;
+            border-radius: 50%;
+            border: 2px solid black;
+            transition: transform 2s;
+        }
+
+        .earth,.moon {
+            
+            position: absolute;
+            border-radius: 50%;
+            border-left: 1px solid blanchedalmond;
+            position: absolute;
+        }
+        .earth{
+          background:linear-gradient(rgb(26, 75, 213),rgb(101, 211, 101));
+            height:9.5rem;
+            width:9.5rem;
+            animation: rotate 5s linear infinite;
+            left:10rem;
+            top:-4rem;
+
+
+
+        }
+          .moon{
+            height: 3rem;
+            width: 3rem;
+            animation: rotate 4s linear infinite; 
+            position:relative;
+            background-color: rgb(183, 176, 176);
+            overflow: hidden;
+            top:-5rem;
+
+          } 
+          .earth::before,
+          .moon::before{
+            content: "";
+            position:absolute;
+            border-radius: 100%;
+            overflow: hidden;
+
+          }
+          .earth::before{
+            height:17rem;
+            width:17rem;
+            border-radius: 50%;
+            border-right: 2px solid rgb(173, 168, 168);
+        
+            left:-4rem;
+            bottom:-3rem;
+          }
+          
+
+        @keyframes rotate {
+          
+            to{
+                transform: rotate(360deg);
+                transform-origin: center;
+
+            }
+
+        }
+        @media (max-width:380px){
+            body {
+            height: 100vh;
+            width:100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+            overflow: hidden;
+        }
+            .container {
+            animation: rotate 15s linear 0s infinite;
+            height: 45vh;
+            width: 45vh;
+            border-radius: 50%;
+            border: 2px solid whitesmoke;
+            /* border-top: 2px solid blanchedalmond; */
+            /* position: relative; */
+             display: flex;
+                justify-content: center;
+                align-items: center;
+                  
+            }
+            .earth{
+            height:5.5rem;
+            width:5.5rem;
+            animation: rotate 5s linear infinite;
+            left:8rem;
+            top:-3rem;
+
+
+
+        }
+          .moon{
+            height: 2.5rem;
+            width: 2.5rem;
+            animation: rotate 4s linear infinite; 
+            position:relative;
+            background-color: rgb(134, 131, 131);
+            overflow: hidden;
+            top:-5rem;
+
+          }   
+          .earth::before,
+          .moon::before{
+            content: "";
+            position:absolute;
+            border-radius: 100%;
+            overflow: hidden;
+
+          }
+          .earth::before{
+            height:13rem;
+            width:13rem;
+            border-radius: 50%;
+            border-right: 2px solid rgb(173, 168, 168);
+        
+            left:-4rem;
+            bottom:-3rem;
+          }
+
+        }
+      
+    </style>
+</head>
+
+<body>
+   <div class="container">
+    <div class="sun"></div>
+    <div class="earth">
+        <div class="moon"></div>
+    </div>
+</div>
+</body>
+
+</html>
